@@ -42,7 +42,7 @@ Use existing Clerk env vars. Do not rename or invent new ones.
 
 ## Dependencies
 
-install: @clerk/ui.
+install: `@clerk/nextjs` (provides `ClerkProvider` and runtime components like `UserButton`) and `@clerk/ui` (provides themes used by the `appearance` prop, e.g., `@clerk/ui/themes`).
 
 ## Check When Done
 
