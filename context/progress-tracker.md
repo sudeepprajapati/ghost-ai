@@ -4,15 +4,16 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Design System Setup
+- Editor Foundation
 
 ## Current Goal
 
-- Implement `context/feature-specs/01-design-system.md`: install shadcn, configure components, set up theme tokens, and add `cn()` utility.
+- Next step in the process.
 
 ## Completed
 
 - `01-design-system.md`: Setup shadcn/ui, configure theme tokens in globals.css.
+- `02-editor.md`: Create EditorNavbar, ProjectSidebar, and update Dialog styles to match ui-context.
 
 ## In Progress
 
