@@ -15,6 +15,14 @@ export function EditorLayout({ children }: { children: React.ReactNode }) {
       />
       
       <div className="relative flex flex-1 overflow-hidden">
+        {/* Mobile backdrop scrim */}
+        {isSidebarOpen && (
+          <div 
+            className="fixed inset-0 z-30 bg-bg-base/80 backdrop-blur-sm lg:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+            aria-hidden="true"
+          />
+        )}
         <ProjectSidebar
           isOpen={isSidebarOpen}
           onClose={() => setIsSidebarOpen(false)}
