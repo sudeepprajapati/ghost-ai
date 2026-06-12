@@ -14,13 +14,21 @@ export function ProjectSidebar({
     <div
       className={cn(
         "fixed left-4 top-20 bottom-4 z-40 w-72 transform rounded-2xl border border-border-subtle bg-bg-surface/95 shadow-lg backdrop-blur transition-transform duration-200 ease-in-out",
-        isOpen ? "translate-x-0" : "-translate-x-[calc(100%+1rem)]"
+        isOpen ? "translate-x-0" : "-translate-x-[calc(100%+1rem)] pointer-events-none"
       )}
+      inert={!isOpen ? true : undefined}
+      aria-hidden={!isOpen}
     >
       <div className="flex h-full flex-col">
         <div className="flex items-center justify-between border-b border-border-subtle p-4">
           <h2 className="text-sm font-medium text-text-primary">Projects</h2>
-          <Button variant="ghost" size="icon-sm" onClick={onClose} className="h-6 w-6">
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={onClose}
+            className="h-6 w-6"
+            aria-label="Close sidebar"
+          >
             <X className="h-4 w-4 text-text-secondary" />
           </Button>
         </div>
